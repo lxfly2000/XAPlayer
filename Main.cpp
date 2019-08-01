@@ -9,8 +9,7 @@
 #include<CommCtrl.h>
 #include"resource.h"
 #include"SDKWaveFile.h"
-#include"E:\Codes\UseVisualStyle.h"
-#include"E:\Codes\WindowControl.h"
+#include"UseVisualStyle.h"
 
 #pragma comment(lib,"xaudio2.lib")
 
@@ -99,7 +98,6 @@ INT_PTR CALLBACK DgCallback(HWND hwnd, UINT msg, WPARAM wP, LPARAM lP)
 	switch (msg)
 	{
 	case WM_INITDIALOG:
-		MoveWindowToScreenCenter(hwnd);
 		CheckLoop(hwnd);
 		SetDlgItemInt(hwnd, IDC_EDIT_START, buffer.PlayBegin, FALSE);
 		SetDlgItemInt(hwnd, IDC_EDIT_LOOP, buffer.LoopBegin, FALSE);
