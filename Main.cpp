@@ -104,11 +104,11 @@ INT_PTR CALLBACK DgCallback(HWND hwnd, UINT msg, WPARAM wP, LPARAM lP)
 		SetDlgItemInt(hwnd, IDC_EDIT_END, buffer.LoopBegin + buffer.LoopLength, FALSE);
 		SetDlgItemText(hwnd, IDC_STATIC_TIME, TEXT("Î´Ñ¡ÔñÎÄ¼þ¡£"));
 		EnableWindow(GetDlgItem(hwnd, IDC_BUTTON_STOP), FALSE);
-		SendMessage(GetDlgItem(hwnd, IDC_STATIC_TIME), WM_SETFONT,
+		/*SendMessage(GetDlgItem(hwnd, IDC_STATIC_TIME), WM_SETFONT,
 			(WPARAM)CreateFont(12, 0, 0, 0,
 				FW_NORMAL, FALSE, FALSE, FALSE,
 				ANSI_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY,
-				DEFAULT_PITCH | FF_SWISS, TEXT("SimSun")), 0);
+				DEFAULT_PITCH | FF_SWISS, TEXT("SimSun")), 0);*/
 		SendMessage(GetDlgItem(hwnd, IDC_SLIDER_VOLUME), TBM_SETRANGE, FALSE, MAKELPARAM(0, XAPLAYER_MAX_VOLUME));
 		SendMessage(GetDlgItem(hwnd, IDC_SLIDER_VOLUME), TBM_SETPOS, TRUE, XAPLAYER_MAX_VOLUME);
 
